@@ -1,0 +1,46 @@
+                     #Regression#
+                    #Linear Model#
+weight=c(15,26,27,2,25.5,27,32,18,22,20,26,24)
+weight
+bmi=c(133.35,16.1,16.74,16,13.59,15.73,15.65,13.85,16.07,12.8,13.65,14.42)
+bmi
+model=lm(bmi~weight)
+model
+coeffs=coefficients(model)
+coeffs
+summary.lm(model)
+summary(model)
+#y=mx+c
+bmi= coeffs[1] + coeffs[2]*weight
+bmi
+Y=c(110,80,70,120,150,90,70,120)
+Y
+X1=c(30,40,20,50,60,40,20,60)
+X1
+X2=c(11,10,7,15,19,12,8,14)
+X2
+inputdata=data.frame(Y,X1,X2)
+inputdata
+RegModel<-lm(Y~X1+X2,data = inputdata)
+RegModel
+summary(RegModel)
+Price=c(4.5,5.5,4.5,4.5,4.0,5.5,5.5,6.5,5.0,5.5,6.0,4.5)
+Price
+QuantitySold=c(125,115,140,140,150,150,130,120,130,100,105,150)
+QuantitySold
+model=lm(Price~QuantitySold)
+model
+coeffs=coefficients(model)
+coeffs
+summary.lm(model)
+summary(model)
+Height=c(175,168,170,171,169,165,165,160,180,186)
+Height
+Weight=c(80,68,72,75,70,65,62,60,85,90)
+Weight
+model=lm(Height~Weight)
+model
+coeffs=coefficients(model)
+coeffs
+summary.lm(model)
+summary(model)
